@@ -1,8 +1,12 @@
 Movie genre api
 
+//grep -in "middleware" ./README.md - to use find command in file 
+
 //npm init
 //npm i express 
     Express - a framework used for building web applications ontop of Node 
+//npm i nodemon (npx nodemon runs local version of nodemon)
+    //Why use local? because your package.json file specifies the version(s) your application runs with. When there are so many different dependencies, sometimes you'll run into problems with different softwares clashing against each other. So running nodemon locally will give you better control
 //create index.js 
 //create express application by using express() function 
     var express = require('express');
@@ -15,6 +19,7 @@ Movie genre api
 //Use environment variable PORT to listen to the app using process.env.PORT
     //const port = process.env.PORT || 3000; 
     app.listen(port, () => { console.log('Listening on port ${port}')});
+    //printenv | grep PORT (in the terminal: PORT=3000)
 //Use HTTP Get/Post requests to get movie genres/create new genres using Postman
     //returned objects from these requests must be parsed and returned back to the client when altered with new id (ex. {"name": "comedy"} should return {"id":6, name: "comedy"} when you use the get request to display /api/genres)
 //npm i joi to validate the input that the client puts in 
